@@ -22,7 +22,7 @@ name                     : "Jayson Brenton"
 description              : "Braindump from javascript and react training courses"
 url                      : #"www.braindump.simple-url.com/"
 baseurl                  : #"/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : #https://bitbucket.org/jaysonbrenton/
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -60,7 +60,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : false, # false (default)
 search_full_content      : true, # false (default)
-search_provider          : google # (default), algolia, google
+search_provider          : default # (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -107,7 +107,7 @@ author:
   email            : "JaysonBrenton@Hotmail.com"
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
-  bitbucket        :
+  bitbucket        : JaysonBrenton
   codepen          :
   dribbble         :
   flickr           :

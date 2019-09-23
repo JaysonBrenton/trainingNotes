@@ -1,0 +1,455 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Functions - Reference Archive</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Reference Archive">
+<meta property="og:title" content="Functions">
+<meta property="og:url" content="http://tuono/javascript/js-Functions/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="http://tuono/assets/images/reflections2.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-05-10T00:00:00+10:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://tuono/javascript/js-Functions/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jayson Brenton",
+      "url": "http://tuono:80",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Reference Archive Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Reference Archive</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/marklogic/" >MarkLogic</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/javascript/" >JavaScript</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/react/" >React</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/tipsntricks"" >Tips n Tricks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/blog"" >Blog</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/reflections2.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+        
+          Functions
+
+        
+      </h1>
+      
+        <p class="page__lead"><br />
+
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Functions">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="May 10, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list-ul"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#function-declarations">Function Declarations</a></li>
+  <li><a href="#function-expressions">Function Expressions</a></li>
+  <li><a href="#immediately-invocable-function-expressions---iifes">Immediately Invocable Function Expressions - IIFEs</a></li>
+  <li><a href="#property-methods">Property Methods</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><br /></p>
+
+<p>In JavaScript, functions are first-class objects; that is, functions are of the type Object and they can be used in a first-class manner like any other object (String, Array, Number, etc.) since they are in fact objects themselves. They can be stored in variables, passed as arguments to functions, created within functions, and returned from functions.</p>
+
+<h2 id="function-declarations">Function Declarations</h2>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre>  <span class="kd">function</span> <span class="nx">greet</span><span class="p">(</span><span class="nx">firstName</span><span class="p">,</span> <span class="nx">lastName</span><span class="p">){</span>
+    <span class="k">return</span> <span class="s2">`Hi </span><span class="p">${</span><span class="nx">firstName</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">lastName</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greet</span><span class="p">(</span><span class="s1">'John'</span><span class="p">,</span><span class="s1">'Doe'</span><span class="p">));</span>
+
+  <span class="c1">// Define default parameters</span>
+  <span class="c1">// pre-es6 you'd have to do something like this,</span>
+  <span class="kd">function</span> <span class="nx">greet</span><span class="p">(</span><span class="nx">firstName</span><span class="p">,</span> <span class="nx">lastName</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">firstName</span> <span class="o">===</span> <span class="s1">'undefined'</span><span class="p">){</span><span class="nx">firstName</span> <span class="o">=</span> <span class="s1">'John'</span><span class="p">};</span>
+    <span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">lastName</span> <span class="o">===</span> <span class="s1">'undefined'</span><span class="p">){</span><span class="nx">lastName</span> <span class="o">=</span> <span class="s1">'Doe'</span><span class="p">};</span>
+    <span class="k">return</span> <span class="s2">`Hi </span><span class="p">${</span><span class="nx">firstName</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">lastName</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greet</span><span class="p">());</span> <span class="nx">Hi</span> <span class="nx">John</span> <span class="nx">Doe</span>
+
+  <span class="c1">// es6 you can do something like this,</span>
+  <span class="kd">function</span> <span class="nx">greet</span><span class="p">(</span><span class="nx">firstName</span> <span class="o">=</span> <span class="s1">'John'</span><span class="p">,</span> <span class="nx">lastName</span> <span class="o">=</span> <span class="s1">'Doe'</span><span class="p">){</span>
+    <span class="k">return</span> <span class="s2">`Hi </span><span class="p">${</span><span class="nx">firstName</span><span class="p">}</span><span class="s2"> </span><span class="p">${</span><span class="nx">lastName</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greet</span><span class="p">());</span> <span class="c1">// Hi John Doe</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="function-expressions">Function Expressions</h2>
+<p>Using a function as a variable assignment.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre>  <span class="c1">// Can be named or anonymous.</span>
+
+  <span class="c1">// Anonymous would look like this;</span>
+  <span class="kd">const</span> <span class="nx">square</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">x</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="c1">// Named would look like this;</span>
+  <span class="kd">const</span> <span class="nx">square</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">square</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">x</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">square</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span> <span class="c1">// 64</span>
+
+  <span class="c1">// As with standard function declarations, you can set defaults on the input parameters.</span>
+  <span class="kd">const</span> <span class="nx">square</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">square</span><span class="p">(</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">3</span><span class="p">){</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">x</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">square</span><span class="p">());</span> <span class="c1">// 9</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="immediately-invocable-function-expressions---iifes">Immediately Invocable Function Expressions - IIFEs</h2>
+<p>IIFEs are functions that you declare and run at the samne time.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre>  <span class="c1">// Needs to be an expression. Has to be within (). E.g</span>
+  <span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'IIFE ran'</span><span class="p">);</span>
+  <span class="p">})();</span> <span class="c1">// IIFE ran</span>
+
+  <span class="c1">// Can accept parameters.</span>
+  <span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Hello </span><span class="p">${</span><span class="nx">name</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
+  <span class="p">})(</span><span class="s1">'John'</span><span class="p">);</span> <span class="c1">// Hello John</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="property-methods">Property Methods</h2>
+<p>When a function is put inside of an object it is called a method.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre>  <span class="kd">const</span> <span class="nx">todo</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">add</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Add todo..'</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="na">edit</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">){</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Edit todo </span><span class="p">${</span><span class="nx">id</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
+    <span class="p">}</span>
+  <span class="p">};</span>
+
+  <span class="nx">todo</span><span class="p">.</span><span class="nx">add</span><span class="p">();</span>
+  <span class="nx">todo</span><span class="p">.</span><span class="nx">edit</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span>
+
+  <span class="c1">// You can defined functions outside of the object as well.</span>
+  <span class="nx">todo</span><span class="p">.</span><span class="k">delete</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Delete todo...'</span><span class="p">)</span>
+  <span class="p">};</span>
+  <span class="nx">todo</span><span class="p">.</span><span class="k">delete</span><span class="p">();</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-05-10T00:00:00+10:00">May 10, 2018</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/javascript/js-conditionals/" class="pagination--pager" title="Conditionals
+">Previous</a>
+    
+    
+      <a href="/javascript/js-loops-iterators/" class="pagination--pager" title="Loops &amp; Iterators
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/JaysonBrenton"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Jayson Brenton. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

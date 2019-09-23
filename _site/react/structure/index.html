@@ -1,0 +1,367 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>React Folder Structure - Reference Archive</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Reference Archive">
+<meta property="og:title" content="React Folder Structure">
+<meta property="og:url" content="http://tuono/react/structure/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="http://tuono/assets/images/reflections2.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2019-09-03T00:00:00+10:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://tuono/react/structure/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jayson Brenton",
+      "url": "http://tuono:80",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Reference Archive Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Reference Archive</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/marklogic/" >MarkLogic</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/javascript/" >JavaScript</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/react/" >React</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/tipsntricks"" >Tips n Tricks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/blog"" >Blog</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/reflections2.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+        
+          React Folder Structure
+
+        
+      </h1>
+      
+        <p class="page__lead"><br />
+
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/assets/images/howTheFuck.jpg"
+        
+        alt="image">
+      
+      <h3></h3>
+      
+
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="React Folder Structure">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="September 03, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list-ul"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#react-app-folder-structure">React App Folder Structure</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><br /></p>
+
+<h2 id="react-app-folder-structure">React App Folder Structure</h2>
+
+<p>The following info describes the base react folder structure after executing ‘create-react-app my-first-react-app’.</p>
+
+<ul>
+  <li>/&lt;<i>project-base</i>&gt;/&lt;<i>app-root</i>&gt;/<b><font color="green">package.json</font></b>
+    <ul>
+      <li>Defines app dependencies etc.</li>
+    </ul>
+  </li>
+  <li>/&lt;<i>project-base</i>&gt;/&lt;<i>app-root</i>&gt;/<b><font color="green">node_modules</font></b>
+    <ul>
+      <li>Contains all the apps dependencies and sub-dependencies.</li>
+    </ul>
+  </li>
+  <li>/&lt;<i>project-base</i>&gt;/&lt;<i>app-root</i>&gt;/<b><font color="green">public</font></b>
+    <ul>
+      <li>Root folder that is served by the web-server.</li>
+    </ul>
+  </li>
+  <li>/&lt;<i>project-base</i>&gt;/&lt;<i>app-root</i>&gt;/<b><font color="green">src/index.js</font></b>
+    <ul>
+      <li>Gets access to the root element (within /project-base/app-root/public/index.html) with,
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'root'</span><span class="p">));</span>
+</code></pre></div>        </div>
+      </li>
+      <li>This file also includes,
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="s1">'./App'</span><span class="p">;</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>/&lt;<i>project-base</i>&gt;/&lt;<i>app-root</i>&gt;/<b><font color="green">src/app.js</font></b>
+    <ul>
+      <li>Contains the only react code that will be found in this auto-generated project.</li>
+    </ul>
+  </li>
+  <li>/&lt;<i>project-base</i>&gt;/&lt;<i>app-root</i>&gt;/<b><font color="green">src/app.test.js</font></b>
+    <ul>
+      <li>Allows for the configuration of unit tests.</li>
+    </ul>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-09-03T00:00:00+10:00">September 03, 2019</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/react/projectSetup/" class="pagination--pager" title="React Project Setup
+">Previous</a>
+    
+    
+      <a href="/react/components/" class="pagination--pager" title="Components
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/JaysonBrenton"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Jayson Brenton. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,581 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>JavaScript Fundamentals - Reference Archive</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Reference Archive">
+<meta property="og:title" content="JavaScript Fundamentals">
+<meta property="og:url" content="http://tuono/javascript/js-fundamentals/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="http://tuono/assets/images/reflections2.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-05-01T00:00:00+10:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://tuono/javascript/js-fundamentals/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jayson Brenton",
+      "url": "http://tuono:80",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Reference Archive Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Reference Archive</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/marklogic/" >MarkLogic</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/javascript/" >JavaScript</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/react/" >React</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/tipsntricks"" >Tips n Tricks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/blog"" >Blog</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/reflections2.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+        
+          JavaScript Fundamentals
+
+        
+      </h1>
+      
+        <p class="page__lead"><br />
+
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      <h3></h3>
+      
+
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="JavaScript Fundamentals">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="May 01, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list-ul"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#console-logging">Console Logging</a></li>
+  <li><a href="#variables">Variables</a>
+    <ul>
+      <li><a href="#let-vs-var">let vs var</a></li>
+      <li><a href="#variable-rules">Variable Rules</a></li>
+    </ul>
+  </li>
+  <li><a href="#data-types">Data Types</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><br /></p>
+
+<h2 id="console-logging">Console Logging</h2>
+<p>To insert JS into HTML, use the &lt;script&gt; tag.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>  <span class="nt">&lt;h1&gt;</span>Some Text<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="s1">'Pops up a message box'</span><span class="p">);</span>
+    <span class="nt">&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"srcFolder/app.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    ...</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>To log to the console from your .js file;</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"a message"</span><span class="p">);</span>
+  <span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>You can also log objects. This is an object literal;</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">({</span><span class="na">a</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="na">b</span><span class="p">:</span><span class="mi">2</span><span class="p">});</span>
+  <span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>You can also log objects to tables;</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>  <span class="nx">console</span><span class="p">.</span><span class="nx">table</span><span class="p">({</span><span class="na">a</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="na">b</span><span class="p">:</span><span class="mi">2</span><span class="p">});</span>
+  <span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Gives you something like this…</p>
+
+<p><a href="/assets/images/logging-js.png"><img src="/assets/images/logging-js.png" alt="logging-js" /></a></p>
+
+<p>You can log errors and warnings;</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre>  <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">"This is an error"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s2">"This is a warning"</span><span class="p">);</span>
+  <span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>You can clear the console with;</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre>  <span class="nx">console</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+  <span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>And record timings with;</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre>  <span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s1">'ID1'</span><span class="p">);</span>
+  <span class="c1">// code to be timed goes here</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">time</span><span class="p">(</span><span class="s1">'ID1'</span><span class="p">);</span>
+  <span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="variables">Variables</h2>
+<p>Can be defined with var, let &amp; const (let/const introduced in ES2015/ES6)</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>  <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">'Jayson'</span><span class="p">;</span>
+  <span class="c1">// or</span>
+  <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Jayson"</span><span class="p">;</span>
+  <span class="kd">const</span> <span class="nx">birthday</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="s1">'21-01-1980'</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">today</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="let-vs-var">let vs var</h3>
+<p>let &amp; const allow you to declare variables that are limited in scope to the block, statement, or expression on which it is used.<br /><br /></p>
+
+<p>This is unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre>  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">===</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+    <span class="c1">// expected output: 2</span>
+  <span class="p">}</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+  <span class="c1">// expected output: 1</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre>  <span class="kd">function</span> <span class="nx">varTest</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// same variable!</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  <span class="c1">// 2</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  <span class="c1">// 2</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">letTest</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1">// different variable</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  <span class="c1">// 2</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>  <span class="c1">// 1</span>
+  <span class="p">}</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre>  <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'global'</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="s1">'global'</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span> <span class="c1">// "global"</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span> <span class="c1">// undefined</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="variable-rules">Variable Rules</h3>
+<ul>
+  <li>Name cannot start with an numeric but can be alphanumeric.</li>
+  <li>Can start with _ or $. _ typically used to represent private vars and $ typically used in jQuery when selecting objects from the DOM.</li>
+  <li>A note on constants. While you can’t reassign a const value you can reassign values if the const is an object. For example;</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre>  <span class="kd">const</span> <span class="nx">person</span><span class="p">{</span>
+    <span class="nl">name</span><span class="p">:</span> <span class="s1">'Jayson'</span><span class="p">,</span>
+    <span class="nx">age</span><span class="p">:</span> <span class="mi">47</span>
+  <span class="p">};</span>
+  <span class="nx">person</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">46</span><span class="p">;</span>
+
+  <span class="kd">const</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,];</span>
+  <span class="nx">numbers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+  <span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h2 id="data-types">Data Types</h2>
+<p>There are two data types;</p>
+<ol>
+  <li>Primitive.
+    <ul>
+      <li>The data is stored directly in the variable accesses.</li>
+      <li>Stored on the stack.</li>
+    </ul>
+  </li>
+  <li>Reference.
+    <ul>
+      <li>Accessed via a reference.</li>
+      <li>Stored on the heap.</li>
+      <li>Is a pointer to a location in memory.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>There are six primitive types;</p>
+<ol>
+  <li>String</li>
+  <li>Number (integers, decimals, floats etc)</li>
+  <li>Boolean</li>
+  <li>Null</li>
+  <li>Undefined (variable that has not been assigned a value)</li>
+  <li>Symbols (ES6)</li>
+</ol>
+
+<p>Reference types include;</p>
+<ul>
+  <li>Arrays</li>
+  <li>Object literals</li>
+  <li>Functions</li>
+  <li>Dates</li>
+  <li>Anything else….</li>
+</ul>
+
+<p>JavaScript is a dynamically typed language. This means that the data types are associated with the values and not the variables. For example,</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="code"><pre>  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'abcd'</span><span class="p">;</span>
+  <span class="nx">x</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">;</span>
+  <span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>This cannot be done with statically typed languages like Java, C#, C++ etc. TypeScript (JavaScript superset) can be used for static typing. Addons such as flow can also be used to provide static typing to JavaScript.</p>
+
+<p>You can use the typeof operator to see what data type you are workingh with. For example,</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre>  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">'abcd'</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span><span class="p">);</span>
+  <span class="c1">// Would return String.</span>
+
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span><span class="p">);</span>
+  <span class="c1">// Would return Boolean.</span>
+
+  <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span><span class="p">);</span>
+  <span class="c1">// Would return Object. Note: This is a bug in the typeof operator.</span>
+  <span class="c1">// The type is actually null and not an object.</span>
+  <span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-05-01T00:00:00+10:00">May 01, 2018</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/javascript/js-conversion-coercion/" class="pagination--pager" title="Type Conversion and Coercion
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/JaysonBrenton"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Jayson Brenton. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

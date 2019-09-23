@@ -1,0 +1,507 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>NiFi - Reference Archive</title>
+<meta name="description" content="Installation">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Reference Archive">
+<meta property="og:title" content="NiFi">
+<meta property="og:url" content="http://tuono/nifi/nifi/">
+
+
+  <meta property="og:description" content="Installation">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2018-09-16T17:45:30+10:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://tuono/nifi/nifi/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jayson Brenton",
+      "url": "http://tuono:80",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Reference Archive Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--posts">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Reference Archive</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/marklogic/" >MarkLogic</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/javascript/" >JavaScript</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/react/" >React</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/tipsntricks"" >Tips n Tricks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/blog"" >Blog</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/me.jpg" alt="Jayson Brenton" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Jayson Brenton</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        I build stuff with things. Sometimes those things work.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Canberra</span>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:JaysonBrenton@Hotmail.com">
+            <meta itemprop="email" content="JaysonBrenton@Hotmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/jayson-brenton-836b63127" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/JaysonBrenton" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title">NiFi</h1>
+    
+    <h2 id="installation">Installation</h2>
+
+<h3 id="downloads">Downloads</h3>
+<ul>
+  <li><a href="http://nifi.apache.org/download.html">Apache NiFi</a></li>
+  <li><a href="https://github.com/marklogic/nifi-nars">MarkLogic NiFi nars</a></li>
+  <li><a href="http://maven.apache.org/download.cgi">Maven</a></li>
+</ul>
+
+<h3 id="install-nifi">Install NiFi</h3>
+<ol>
+  <li>Download the installer,
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Documents/Development/
+$ wget http://www.strategylions.com.au/mirror/nifi/1.7.1/nifi-1.7.1-bin.tar.gz
+</code></pre></div>    </div>
+  </li>
+  <li>Extract,
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gunzip nifi-1.7.1-bin.tar.gz
+$ tar -xvf nifi-1.7.1-bin.tar
+$ ll
+drwxrwxr-x. 4 xxxxxx xxxxxx 36 Oct 16 11:10 nifi-1.7.1
+</code></pre></div>    </div>
+  </li>
+  <li>Update the http port if required,
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ vi ~/Documents/Development/nifi-1.7.1/conf/nifi.properties
+</code></pre></div>    </div>
+    <p>Change:</p>
+    <ul>
+      <li>nifi.web.http.port=8080 to 9999</li>
+    </ul>
+  </li>
+  <li>Install MarkLogic nar files,
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Documents/Development/nifi-1.7.1/lib/
+$ wget https://github.com/marklogic/nifi/releases/download/marklogic-1.7.1.1/nifi-marklogic-nar-1.7.1.1.nar
+$ wget https://github.com/marklogic/nifi/releases/download/marklogic-1.7.1.1/nifi-marklogic-services-api-nar-1.7.1.1.nar
+</code></pre></div>    </div>
+  </li>
+  <li>Start NiFi
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Documents/Development/nifi-1.7.1/bin
+$ /nifi.sh start
+</code></pre></div>    </div>
+  </li>
+  <li>Test: <a href="http://rh7ml906dev1.lan:9999/nifi/">http://rh7ml906dev1.lan:9999/nifi/</a></li>
+</ol>
+
+<h3 id="install-maven">Install Maven</h3>
+<ol>
+  <li>Download the installer,
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Documents/Development/
+$ wget http://mirror.ventraip.net.au/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+</code></pre></div>    </div>
+  </li>
+  <li>Extract,
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gunzip apache-maven-3.5.4-bin.tar.gz
+$ tar -xvf apache-maven-3.5.4-bin.tar
+$ mv apache-maven-3.5.4 maven-3.5.4
+$ ll
+drwxrwxr-x.  6 xxxxxx xxxxxx  99 Oct 17 16:54 maven-3.5.4
+</code></pre></div>    </div>
+  </li>
+  <li>Update .profile
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~
+$ vi .profile
+export M2_HOME='/home/jayson/Documents/Development/maven-3.5.4'
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64
+</code></pre></div>    </div>
+  </li>
+  <li>Test
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mvn --version
+Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-18T04:33:14+10:00)
+Maven home: /home/jayson/Documents/Development/maven-3.5.4
+Java version: 1.8.0_181, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "3.10.0-862.9.1.el7.x86_64", arch: "amd64", family: "unix"
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="nifi-key-concepts">NiFi Key Concepts</h3>
+
+<h4 id="nifi---based-on-flow-based-programming-fpb"><strong><em><span style="color:red">NiFi - Based on Flow Based Programming (FPB)</span></em></strong></h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>FPB Term</th>
+      <th>NiFi Term</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Information Packet</td>
+      <td>Flowfile</td>
+      <td>Each object moving through the system. The atomic unit of data.</td>
+    </tr>
+    <tr>
+      <td>Black Box</td>
+      <td>Flowfile Processor</td>
+      <td>Performs the work, combination of data routing, transformation or mediation between systems</td>
+    </tr>
+    <tr>
+      <td>Bounded Buffer</td>
+      <td>Connection</td>
+      <td>The linkage between processors, acting as queues. Allows various processes to interact at different rates.</td>
+    </tr>
+    <tr>
+      <td>Scheduler</td>
+      <td>Flow Controller</td>
+      <td>Maintains the knowledge of how processes are connected and manages the threads and allocation thereof for all processors.</td>
+    </tr>
+    <tr>
+      <td>Subnet</td>
+      <td>Process Group</td>
+      <td>A set of processes and their connections which can receive and send data via ports.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<ul class="taxonomy__index">
+  
+  
+    <li>
+      <a href="#2018">
+        <strong>2018</strong> <span class="taxonomy__count">1</span>
+      </a>
+    </li>
+  
+</ul>
+
+
+
+  <section id="2018" class="taxonomy__section">
+    <h2 class="archive__subtitle">2018</h2>
+    <div class="entries-list">
+      
+        
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/nifi/nifi/" rel="permalink">NiFi
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Installation
+
+</p>
+  </article>
+</div>
+      
+    </div>
+    <a href="#page-title" class="back-to-top">Back to top &uarr;</a>
+  </section>
+
+
+  </div>
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/JaysonBrenton"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Jayson Brenton. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

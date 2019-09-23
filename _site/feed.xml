@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://tuono/feed.xml" rel="self" type="application/atom+xml" /><link href="http://tuono/" rel="alternate" type="text/html" /><updated>2019-09-23T12:16:43+10:00</updated><id>http://tuono/</id><title type="html">Reference Archive</title><subtitle>An archive of code snippets, handy commands and miscellaneous technical regurgitations</subtitle><author><name>Jayson Brenton</name><email>JaysonBrenton@Hotmail.com</email></author><entry><title type="html">NiFi</title><link href="http://tuono/nifi/nifi/" rel="alternate" type="text/html" title="NiFi" /><published>2018-09-16T17:45:30+10:00</published><updated>2018-09-16T17:45:30+10:00</updated><id>http://tuono/nifi/nifi</id><content type="html" xml:base="http://tuono/nifi/nifi/">&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;h3 id=&quot;downloads&quot;&gt;Downloads&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nifi.apache.org/download.html&quot;&gt;Apache NiFi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/marklogic/nifi-nars&quot;&gt;MarkLogic NiFi nars&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://maven.apache.org/download.cgi&quot;&gt;Maven&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;install-nifi&quot;&gt;Install NiFi&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Download the installer,
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd ~/Documents/Development/
+$ wget http://www.strategylions.com.au/mirror/nifi/1.7.1/nifi-1.7.1-bin.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Extract,
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gunzip nifi-1.7.1-bin.tar.gz
+$ tar -xvf nifi-1.7.1-bin.tar
+$ ll
+drwxrwxr-x. 4 xxxxxx xxxxxx 36 Oct 16 11:10 nifi-1.7.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Update the http port if required,
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vi ~/Documents/Development/nifi-1.7.1/conf/nifi.properties
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Change:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;nifi.web.http.port=8080 to 9999&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install MarkLogic nar files,
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd ~/Documents/Development/nifi-1.7.1/lib/
+$ wget https://github.com/marklogic/nifi/releases/download/marklogic-1.7.1.1/nifi-marklogic-nar-1.7.1.1.nar
+$ wget https://github.com/marklogic/nifi/releases/download/marklogic-1.7.1.1/nifi-marklogic-services-api-nar-1.7.1.1.nar
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Start NiFi
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd ~/Documents/Development/nifi-1.7.1/bin
+$ /nifi.sh start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Test: &lt;a href=&quot;http://rh7ml906dev1.lan:9999/nifi/&quot;&gt;http://rh7ml906dev1.lan:9999/nifi/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;install-maven&quot;&gt;Install Maven&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Download the installer,
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd ~/Documents/Development/
+$ wget http://mirror.ventraip.net.au/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Extract,
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gunzip apache-maven-3.5.4-bin.tar.gz
+$ tar -xvf apache-maven-3.5.4-bin.tar
+$ mv apache-maven-3.5.4 maven-3.5.4
+$ ll
+drwxrwxr-x.  6 xxxxxx xxxxxx  99 Oct 17 16:54 maven-3.5.4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Update .profile
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd ~
+$ vi .profile
+export M2_HOME='/home/jayson/Documents/Development/maven-3.5.4'
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Test
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mvn --version
+Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-18T04:33:14+10:00)
+Maven home: /home/jayson/Documents/Development/maven-3.5.4
+Java version: 1.8.0_181, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: &quot;linux&quot;, version: &quot;3.10.0-862.9.1.el7.x86_64&quot;, arch: &quot;amd64&quot;, family: &quot;unix&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;nifi-key-concepts&quot;&gt;NiFi Key Concepts&lt;/h3&gt;
+
+&lt;h4 id=&quot;nifi---based-on-flow-based-programming-fpb&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;span style=&quot;color:red&quot;&gt;NiFi - Based on Flow Based Programming (FPB)&lt;/span&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;FPB Term&lt;/th&gt;
+      &lt;th&gt;NiFi Term&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Information Packet&lt;/td&gt;
+      &lt;td&gt;Flowfile&lt;/td&gt;
+      &lt;td&gt;Each object moving through the system. The atomic unit of data.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Black Box&lt;/td&gt;
+      &lt;td&gt;Flowfile Processor&lt;/td&gt;
+      &lt;td&gt;Performs the work, combination of data routing, transformation or mediation between systems&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bounded Buffer&lt;/td&gt;
+      &lt;td&gt;Connection&lt;/td&gt;
+      &lt;td&gt;The linkage between processors, acting as queues. Allows various processes to interact at different rates.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Scheduler&lt;/td&gt;
+      &lt;td&gt;Flow Controller&lt;/td&gt;
+      &lt;td&gt;Maintains the knowledge of how processes are connected and manages the threads and allocation thereof for all processors.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Subnet&lt;/td&gt;
+      &lt;td&gt;Process Group&lt;/td&gt;
+      &lt;td&gt;A set of processes and their connections which can receive and send data via ports.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Jayson Brenton</name><email>JaysonBrenton@Hotmail.com</email></author><summary type="html">Installation</summary></entry></feed>

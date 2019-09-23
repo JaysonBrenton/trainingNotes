@@ -1,0 +1,90 @@
+---
+layout: posts
+title:  "NiFi"
+date:   2018-09-16 17:45:30 +1000
+categories: nifi
+---
+
+## Installation
+
+### Downloads
+* [Apache NiFi](http://nifi.apache.org/download.html)
+* [MarkLogic NiFi nars](https://github.com/marklogic/nifi-nars)
+* [Maven](http://maven.apache.org/download.cgi)
+
+### Install NiFi
+1. Download the installer,
+```
+$ cd ~/Documents/Development/
+$ wget http://www.strategylions.com.au/mirror/nifi/1.7.1/nifi-1.7.1-bin.tar.gz
+```
+2. Extract,
+```
+$ gunzip nifi-1.7.1-bin.tar.gz
+$ tar -xvf nifi-1.7.1-bin.tar
+$ ll
+drwxrwxr-x. 4 xxxxxx xxxxxx 36 Oct 16 11:10 nifi-1.7.1
+```
+3. Update the http port if required,
+```
+$ vi ~/Documents/Development/nifi-1.7.1/conf/nifi.properties
+```
+Change:
+* nifi.web.http.port=8080 to 9999
+4. Install MarkLogic nar files,
+```
+$ cd ~/Documents/Development/nifi-1.7.1/lib/
+$ wget https://github.com/marklogic/nifi/releases/download/marklogic-1.7.1.1/nifi-marklogic-nar-1.7.1.1.nar
+$ wget https://github.com/marklogic/nifi/releases/download/marklogic-1.7.1.1/nifi-marklogic-services-api-nar-1.7.1.1.nar
+```
+5. Start NiFi
+```
+$ cd ~/Documents/Development/nifi-1.7.1/bin
+$ /nifi.sh start
+```
+6. Test: <a href="http://rh7ml906dev1.lan:9999/nifi/">http://rh7ml906dev1.lan:9999/nifi/</a>
+
+### Install Maven
+1. Download the installer,
+```
+$ cd ~/Documents/Development/
+$ wget http://mirror.ventraip.net.au/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+```
+2. Extract,
+```
+$ gunzip apache-maven-3.5.4-bin.tar.gz
+$ tar -xvf apache-maven-3.5.4-bin.tar
+$ mv apache-maven-3.5.4 maven-3.5.4
+$ ll
+drwxrwxr-x.  6 xxxxxx xxxxxx  99 Oct 17 16:54 maven-3.5.4
+```
+3. Update .profile
+```
+$ cd ~
+$ vi .profile
+export M2_HOME='/home/jayson/Documents/Development/maven-3.5.4'
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64
+```
+4. Test
+```
+$ mvn --version
+Apache Maven 3.5.4 (1edded0938998edf8bf061f1ceb3cfdeccf443fe; 2018-06-18T04:33:14+10:00)
+Maven home: /home/jayson/Documents/Development/maven-3.5.4
+Java version: 1.8.0_181, vendor: Oracle Corporation, runtime: /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.181-3.b13.el7_5.x86_64/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: "linux", version: "3.10.0-862.9.1.el7.x86_64", arch: "amd64", family: "unix"
+```
+
+### NiFi Key Concepts
+
+#### ***<span style="color:red">NiFi - Based on Flow Based Programming (FPB)</span>***
+
+| FPB Term |NiFi Term |Description |
+|-------------|-------------|-------------|
+|Information Packet |Flowfile |Each object moving through the system. The atomic unit of data. |
+|Black Box   |Flowfile Processor   |Performs the work, combination of data routing, transformation or mediation between systems   |
+|Bounded Buffer   |Connection   |The linkage between processors, acting as queues. Allows various processes to interact at different rates.   |
+|Scheduler   |Flow Controller   |Maintains the knowledge of how processes are connected and manages the threads and allocation thereof for all processors.   |
+|Subnet   |Process Group   |A set of processes and their connections which can receive and send data via ports.   |

@@ -1,0 +1,426 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Docker - Reference Archive</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Reference Archive">
+<meta property="og:title" content="Docker">
+<meta property="og:url" content="http://tuono/tipsntricks/docker">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="http://tuono/assets/images/reflections2.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-02-03T00:00:00+11:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://tuono/tipsntricks/docker">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jayson Brenton",
+      "url": "http://tuono:80",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Reference Archive Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Reference Archive</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/marklogic/" >MarkLogic</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/javascript/" >JavaScript</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/react/" >React</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/tipsntricks"" >Tips n Tricks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/blog"" >Blog</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/reflections2.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+        
+          Docker
+
+        
+      </h1>
+      
+        <p class="page__lead"><br />
+
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/assets/images/docker.png"
+        
+        alt="image">
+      
+      <h3></h3>
+      
+
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Docker">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="February 03, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list-ul"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#install">Install</a></li>
+  <li><a href="#basics">Basics</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><br /></p>
+
+<h2 id="install">Install</h2>
+<p>Install guide for Mac can be found <a href="https://docs.docker.com/docker-for-mac/install/">here</a>. Follow the bouncing ball.</p>
+
+<h2 id="basics">Basics</h2>
+<p>The Docker CLI, standard cmd,
+<a href="/assets/images/docker-cmd1.png"><img src="/assets/images/docker-cmd1.png" alt="docker-cmd1" /></a></p>
+
+<p>Run in interactive mode</p>
+<ul>
+  <li>-it : interactive mode</li>
+  <li>with the ubuntu image</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -it ubuntu /bin/bash
+root@ffb8b15ead13:/# ll
+total 72
+drwxr-xr-x   1 root root 4096 Oct 20 14:27 ./
+drwxr-xr-x   1 root root 4096 Oct 20 14:27 ../
+-rwxr-xr-x   1 root root    0 Oct 20 14:27 .dockerenv*
+drwxr-xr-x   2 root root 4096 Aug 21 21:14 bin/
+drwxr-xr-x   2 root root 4096 Apr 24 08:34 boot/
+....
+</code></pre></div></div>
+
+<p>Show running containers,</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+ffb8b15ead13        ubuntu              "/bin/bash"         58 seconds ago      Up 57 seconds                           epic_elion
+</code></pre></div></div>
+
+<p>Show all containers, even if not running,</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+</code></pre></div></div>
+
+<p>Start and attach to a container,</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker start ff
+$ docker attach ff
+</code></pre></div></div>
+
+<p>Stop a running container,</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker stop ff
+</code></pre></div></div>
+
+<p>Remove a container,</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker rm ff
+</code></pre></div></div>
+
+<p>Multiple containers from the same image,</p>
+<ul>
+  <li>-d : detached mode. You have to manually attach to the process.</li>
+  <li>–rm : remove the image after the process stop.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -it -d --rm --name ubuntu1 ubuntu /bin/bash
+$ docker run -it -d --rm --name ubuntu2 ubuntu /bin/bash
+$ docker run -it -d --rm --name ubuntu3 ubuntu /bin/bash
+</code></pre></div></div>
+
+<p>Docker volumes,</p>
+<ul>
+  <li>-v : creates a mount point between the host and the image.</li>
+  <li>%CD% : current working directory.</li>
+  <li>maxcnunes/unrar : an unrar imgage.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run --rm -v %CD%:/files maxcnunes/unrar unrar x -r file.rar
+</code></pre></div></div>
+
+<p>Run a particular version of node,</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -it --rm --name node node:7.7.4-alpine
+Unable to find image 'node:7.7.4-alpine' locally
+7.7.4-alpine: Pulling from library/node
+709515475419: Pull complete
+943e0887e008: Pull complete
+c99fe67ba1a0: Pull complete
+Digest: sha256:f20be1cf343dfea60d8250ed209e28ee9de9e3b69d414a9f5b0e1deb23ac0c45
+Status: Downloaded newer image for node:7.7.4-alpine
+&gt; const fs = require('fs');
+&gt; fs.readdir('/', (err,path) =&gt; console.log(path));
+&gt; undefined
+&gt; [ '.dockerenv',
+  'bin',
+  'dev',
+  ...]
+</code></pre></div></div>
+
+<p>Run a node app from a local volume,</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
+
+<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">'content-type'</span><span class="p">:</span> <span class="s1">'text/plain'</span><span class="p">});</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">'Hello World'</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Server is running on 3000'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -it --rm --name node -d -v /Users/xxxxxx/Documents/Development/node/SimpleHTTPSrv/src node:7.7.4-alpine node app.js
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-03T00:00:00+11:00">February 03, 2018</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tipsntricks/wireshark/" class="pagination--pager" title="Wireshark
+">Previous</a>
+    
+    
+      <a href="/tipsntricks/markdown/" class="pagination--pager" title="Markdown
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/JaysonBrenton"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Jayson Brenton. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

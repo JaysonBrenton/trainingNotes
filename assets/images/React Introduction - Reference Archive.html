@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:4000/react/intro/ -->
+<html lang="en" class="js fontawesome-i2svg-active fontawesome-i2svg-complete"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+<!-- begin _includes/seo.html --><title>React Introduction - Reference Archive</title>
+<meta name="description" content="React JavaScript libraryReact (also known as React.js or ReactJS) is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Reference Archive">
+<meta property="og:title" content="React Introduction">
+<meta property="og:url" content="http://localhost:4000/react/intro/">
+
+
+  <meta property="og:description" content="React JavaScript libraryReact (also known as React.js or ReactJS) is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/reflections2.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-01-01T00:00:00+11:00">
+
+
+
+
+
+  
+
+  
+
+
+<style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1em}.svg-inline--fa.fa-stack-2x{height:2em;width:2em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}</style><link rel="canonical" href="http://localhost:4000/react/intro/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jayson Brenton",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Reference Archive Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="./React Introduction - Reference Archive_files/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  <style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+
+  <body class="layout--single" style="margin-bottom: 180.75px;">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/">Reference Archive</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/marklogic/">MarkLogic</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/nodejs/">node.js</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/javascript/">JavaScript</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/react/">React</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/tipsntricks" "="">Tips n Tricks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/blog" "="">Blog</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button" count="0" style="">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay" style=" background-image: url(&#39;/assets/images/reflections2.jpg&#39;);">
+  
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+        
+          React Introduction
+
+        
+      </h1>
+      
+        <p class="page__lead"><br>
+</p><h2 id="react-javascript-library">React JavaScript library</h2>
+React (also known as React.js or ReactJS) is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.
+
+<p></p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="./React Introduction - Reference Archive_files/react-logo.png" alt="image">
+      
+      <h3>Overview</h3>
+      <p>Introduction to the react framework</p>
+
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope="" itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="React Introduction">
+    <meta itemprop="description" content="React JavaScript libraryReact (also known as React.js or ReactJS) is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.">
+    <meta itemprop="datePublished" content="January 01, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><svg class="svg-inline--fa fa-list-ul fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="list-ul" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M96 96c0 26.51-21.49 48-48 48S0 122.51 0 96s21.49-48 48-48 48 21.49 48 48zM48 208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm0 160c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm96-236h352c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><!-- <i class="fas fa-list-ul"></i> --> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="http://localhost:4000/react/intro/#react-javascript-library">React JavaScript library</a></li>
+  <li><a href="http://localhost:4000/react/intro/#yarn">Yarn</a>
+    <ul>
+      <li><a href="http://localhost:4000/react/intro/#yarnlock">yarn.lock</a></li>
+      <li><a href="http://localhost:4000/react/intro/#parallel-installation">Parallel Installation</a></li>
+      <li><a href="http://localhost:4000/react/intro/#cleaner-output">Cleaner Output</a></li>
+      <li><a href="http://localhost:4000/react/intro/#cli-differences">CLI Differences</a></li>
+      <li><a href="http://localhost:4000/react/intro/#install-yarn-globally">Install yarn Globally</a></li>
+    </ul>
+  </li>
+  <li><a href="http://localhost:4000/react/intro/#react-dev-tools">React Dev Tools</a></li>
+  <li><a href="http://localhost:4000/react/intro/#live-server">Live Server</a></li>
+  <li><a href="http://localhost:4000/react/intro/#babel-code-conversion">Babel Code Conversion</a>
+    <ul>
+      <li><a href="http://localhost:4000/react/intro/#install-babel-cli">Install Babel CLI</a></li>
+    </ul>
+  </li>
+  <li><a href="http://localhost:4000/react/intro/#first-react-app">First React App</a>
+    <ul>
+      <li><a href="http://localhost:4000/react/intro/#setup-the-public-assets-location">Setup the Public Assets Location</a></li>
+      <li><a href="http://localhost:4000/react/intro/#include-react-libs--pub-scripts">Include React Libs &amp; Pub Scripts</a></li>
+      <li><a href="http://localhost:4000/react/intro/#jsx-first-look">JSX First Look</a></li>
+      <li><a href="http://localhost:4000/react/intro/#jsx-to-javascript-conversion">JSX to JavaScript Conversion</a></li>
+      <li><a href="http://localhost:4000/react/intro/#project-setup-with-babel">Project Setup with Babel</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><br></p>
+<h2 id="react-javascript-library">React JavaScript library</h2>
+<p>React (also known as React.js or ReactJS) is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)">React Wikipedia Reference</a>.</p>
+
+<h2 id="yarn">Yarn</h2>
+<p>Yarn is a new JavaScript package manager built by Facebook, Google, Exponent and Tilde. Yarn is only a new CLI client that fetches modules from the npm registry. It is not intended as a replacement for NPM. Its purpose is to solve a handful of problems that these teams faced with npm, namely:</p>
+
+<ul>
+  <li>Installing packages wasn’t fast/consistent enough, and</li>
+  <li>There were security concerns, as npm allows packages to run code on installation.</li>
+</ul>
+
+<h3 id="yarnlock">yarn.lock</h3>
+<p>The yarn.lock file performs the same functions as npm-shrinkwrap.json in that an exact version of a dependant package is defined rather than the potential range of dependencies that can exist in the package.json file (E.g. “fstream”: “~1.0.2”).</p>
+
+<p>The big difference between yarn.lock and npm-shrinkwrap.json is that yarn.lock is automatically created and npm-shrinkwrap.json must be manually created with npm shrinkwrap.</p>
+
+<h4 id="semantic-versioning-semver">Semantic Versioning (semver)</h4>
+<p>It’s worth understanding semver in NPM in order to understand why it’s important to have an automatically generated yarn.lock file.
+Semantic versioning as the publisher of a package,</p>
+<ul>
+  <li>0.0.1: not yet stable\ready for initial release.</li>
+  <li>1.0.0: ready to be shared with others.</li>
+  <li>1.0.1: minor bug fix.</li>
+  <li>1.1.0: new functionality.</li>
+  <li>2.0.0: new major release. Not backwards compatible.</li>
+</ul>
+
+<p>As the consumer of a package, you specify which kinds of updates you want to accept. If you only want patch updates. E.g. 1.0.0-&gt;1.0.1 and not 1.0.0-&gt;1.1.0;</p>
+<ul>
+  <li>1.0.x</li>
+  <li>~1.0.4</li>
+</ul>
+
+<p>If you need to download only new features and not anything that may not be backwards compatible. E.g. 1.0.0-&gt;1.1.0 and not 1.0.0-&gt;2.0.0;</p>
+<ul>
+  <li>1.x</li>
+  <li>^1.0.4</li>
+</ul>
+
+<h3 id="parallel-installation">Parallel Installation</h3>
+<p>Whenever npm or Yarn needs to install a package, it carries out a series of tasks. In npm, these tasks are executed per package and sequentially, meaning it will wait for a package to be fully installed before moving on to the next. Yarn executes these tasks in parallel, increasing performance.</p>
+
+<h3 id="cleaner-output">Cleaner Output</h3>
+<p>By default npm is very verbose. For example, it recursively lists all installed packages when running npm install <package>. Yarn on the other hand, isn’t verbose at all. When details can be obtained via other commands, it lists significantly less information with appropriate emojis (unless you’re on Windows).</package></p>
+
+<p><a href="./React Introduction - Reference Archive_files/yarninstall.png" class="image-popup"><img src="./React Introduction - Reference Archive_files/yarninstall.png" alt="yarninstall"></a></p>
+
+<h3 id="cli-differences">CLI Differences</h3>
+<p>Yarn also has different commands. Some npm commands were removed, others modified and a couple of interesting commands were added.</p>
+
+<h4 id="yarn-global">yarn global</h4>
+<p>Install packages globally on your operating system. <em>yarn global</em> is a prefix used for a number of commands like add, bin, list and remove. They behave identically to their normal versions except that they use a global directory to store packages.</p>
+
+<p>Just like npm, project-specific dependencies shouldn’t need to be installed globally.</p>
+
+<p><strong>Note:</strong> Unlike the –global flag in npm, global is a command which must immediately follow yarn. Entering yarn add global package-name will add the packages named global and package-name locally instead of adding package-name globally.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn global &lt;add/bin/list/remove/upgrade&gt; [--prefix]
+</code></pre></div></div>
+
+<p>To view the location of the globally installed packages;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn global bin
+/usr/local/bin
+$
+</code></pre></div></div>
+
+<h4 id="yarn-install">yarn install</h4>
+<p>The <em>npm install</em> command will install dependencies from the package.json file and allows you to add new packages. yarn install only installs the dependencies listed in yarn.lock or package.json, in that order.</p>
+
+<h4 id="yarn-add--dev">yarn add [-dev]</h4>
+<p>Similar to npm install <package>, yarn add <package> allows you to add and install a dependency. As the name of the command implies, it adds a dependency, meaning it automatically saves a reference to the package in the package.json file, just as npm’s --save flag does. Yarn’s --dev flag adds the package as a developer dependency, like npm’s --save-dev flag.</package></package></p>
+
+<h3 id="install-yarn-globally">Install yarn Globally</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm install -g yarn
+</code></pre></div></div>
+
+<p>The yarn doco can be found <a href="https://yarnpkg.com/en/">here</a></p>
+
+<h2 id="react-dev-tools">React Dev Tools</h2>
+<p>React Developer Tools is a Chrome DevTools extension for the open-source React JavaScript library. It allows you to inspect the React component hierarchies in the Chrome Developer Tools.</p>
+
+<p>You will get a new tab called React in your Chrome DevTools. This shows you the root React components that were rendered on the page, as well as the subcomponents that they ended up rendering.</p>
+
+<p>By selecting one of the components in the tree, you can inspect and edit its current props and state in the panel on the right. In the breadcrumbs you can inspect the selected component, the component that created it, the component that created that one, and so on.</p>
+
+<p>If you inspect a React element on the page using the regular Elements tab, then switch over to the React tab, that element will be automatically selected in the React tree.</p>
+
+<p>To install the React Dev Tools;</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm install -g react-devtools
+</code></pre></div></div>
+
+<h2 id="live-server">Live Server</h2>
+<p>This is a little development server with live reload capability. Pages reload automatically after changes to files thus helps to speed up development. To install live server globally;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm install live-server -g
+$ live-server -v
+$ live-server 1.2.0
+</code></pre></div></div>
+
+<p>Live server usage examples are shown below. More info on live server can be found <a href="https://www.npmjs.com/package/live-server">here</a>.</p>
+
+<h2 id="babel-code-conversion">Babel Code Conversion</h2>
+<p>Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. The most common use for Babel is to take features from ES6 &amp; ES7 and compiling them down to ES5.<br></p>
+
+<p>In following examples, will use babel to convert JSX to JavaScript.</p>
+
+<h3 id="install-babel-cli">Install Babel CLI</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm install babel-cli@6.24.1 -g
+$ babel --help
+Usage: babel [options] &lt;files ...&gt;
+Options:
+  -f, --filename [filename]            filename to use when reading from stdin - this will be used in source-maps, errors etc
+  --retain-lines                       retain line numbers - will result in really ugly code
+  --no-highlight-code                  enable/disable ANSI syntax highlighting of code frames (on by default)
+  --presets [list]
+  ...
+</code></pre></div></div>
+
+<p>More info on babel can be found <a href="https://babeljs.io/">here</a>.<br>
+You can test the converstion of things like JSX to JavaScript <a href="http://babeljs.io/repl">here</a>.</p>
+
+<h2 id="first-react-app">First React App</h2>
+
+<h3 id="setup-the-public-assets-location">Setup the Public Assets Location</h3>
+<p>The public folder will contain all the assets that will be served up.</p>
+
+<ul>
+  <li>Setup a <strong>/public/</strong> folder in the app root directory.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Documents/Development/react-course/indecision-app/
+$ mkdir public
+</code></pre></div></div>
+
+<ul>
+  <li>Create a <strong>/public/index.html</strong>;</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">'utf-8'</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Some Title<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'app'</span><span class="nt">&gt;&lt;/div&gt;</span> <span class="c">&lt;!-- this div will be used as a target for a JSX template. --&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Test that the page can be served up using live-server;</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ live-server public
+</code></pre></div></div>
+
+<h3 id="include-react-libs--pub-scripts">Include React Libs &amp; Pub Scripts</h3>
+<ul>
+  <li>Setup a <strong>/public/scripts/</strong> folder. The public folder will contain all the assets that will be served up.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Documents/Development/react-course/indecision-app/public
+$ mkdir scripts
+</code></pre></div></div>
+
+<ul>
+  <li>Create a <strong>/public/scripts/app.js</strong> file. Resulting structure should look like this;</li>
+</ul>
+
+<p><a href="./React Introduction - Reference Archive_files/react-struct-1.png" class="image-popup"><img src="./React Introduction - Reference Archive_files/react-struct-1.png" alt="react-struct-1" height="250" width="270"></a></p>
+
+<ul>
+  <li>Add react libraries and public JS to the body of <strong>/public/index.html</strong> via a CDN (unpkg.com).</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">'utf-8'</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;title&gt;</span>title<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">'app'</span><span class="nt">&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/react@16.0.0/umd/react.development.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+      <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/scripts/app.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Test that the React libraries are available via the Chrome dev console.
+    <ul>
+      <li>React : {Children: {…}, Component: ƒ,&nbsp;…}</li>
+      <li>ReactDOM: {createPortal: ƒ, hydrate: ƒ, render: ƒ,&nbsp;…}</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Note:</strong></p>
+<ul>
+  <li>If you don’t see the React and ReactDOM variables return within the console, there is likely a typo in the script tags in index.html.</li>
+  <li>If you see something like;
+<br><br>
+<span style="color:red">‘Refused to execute script from ‘<span style="color:blue">http://127.0.0.1:8080/scripts/app.js</span>’ because its MIME type (‘text/html’) is not executable, and strict MIME type checking is enabled: Unexpected token’</span>
+<br><br>
+this will be due to a app.js pathing problem in the index.html. Remember, the paths in the HTML are relative to the public folder.</li>
+</ul>
+
+<h3 id="jsx-first-look">JSX First Look</h3>
+<p>JavaScript XML (JSX) is a JavaScript syntax extension and has been provided by React. The following example shows the creation of a template variable that has been assigned some JSX data.</p>
+
+<ul>
+  <li>Update the <strong>/public/scripts/app.js</strong> with the following;</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// /public/scripts/app.js</span>
+<span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">JSX</span> <span class="k">from</span> <span class="nx">app</span><span class="p">.</span><span class="nx">js</span><span class="o">!&lt;</span><span class="sr">/p&gt;</span><span class="err">;
+</span><span class="kd">var</span> <span class="nx">appRoot</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'app'</span><span class="p">);</span>
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span><span class="nx">appRoot</span><span class="p">);</span>
+</code></pre></div></div>
+<p>So, what’s going on here?</p>
+<ul>
+  <li>We have created a template variable containing JSX.</li>
+  <li>We have an appRoot variable containing the ‘app’ HTML element. <br>
+In this example it will be the <em>&lt;div id=’app’&gt;&lt;/div&gt;</em> element within index.html.</li>
+  <li>We then use ReactDOM.render() to render the JSX into the index.html. The ReactDOM.render() method takes two arguments;
+    <ol>
+      <li>The JSX template you want to render. In this example it is the template variable.</li>
+      <li>The DOM element. This is the ID of the HTML element where this template should be rendered.</li>
+    </ol>
+  </li>
+</ul>
+
+<p>But there’s a problem! If you run the app you will receive the error;
+<br><br>
+<span style="color:red">‘Uncaught SyntaxError: Unexpected token’</span>
+<br><br>
+The error is being thrown from the JSX expression, &lt;p&gt;This is JSX from app.js!&lt;/p&gt;. This is because JSX expressions are not part of javascript, it’s an extension. The code needs to be compiled down to javascript. To compile the JSX down to JavaScript we will use <a href="https://babeljs.io/">Babel</a>.</p>
+
+<h3 id="jsx-to-javascript-conversion">JSX to JavaScript Conversion</h3>
+<p>To get rid of the ‘Uncaught SyntaxError: Unexpected token’ error seen in the previous section we need to convert the JSX into something that the browser can understand. This is where Babel comes into play.<br></p>
+
+<p>Using the JSX example above, babel would convert as shown below;</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//JSX. browser does not understand this,</span>
+<span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">JSX</span> <span class="k">from</span> <span class="nx">app</span><span class="p">.</span><span class="nx">js</span><span class="o">!&lt;</span><span class="sr">/p&gt;</span><span class="err">;
+</span>
+<span class="c1">//ES5. browser does understand this,</span>
+<span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span>
+  <span class="s2">"p"</span><span class="p">,</span>
+  <span class="kc">null</span><span class="p">,</span>
+  <span class="s2">"This is JSX from app.js!"</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>You can generate the converted code with the Babel compiler <a href="http://babeljs.io/repl">here</a>. <br><br>
+It is possible to take the converted JSX and insert it into the app.js to bypass the error however this is a far from efficiant practice.<br><br>
+In the following section we will include Babel in the project to perform automatic conversions.</p>
+
+<h3 id="project-setup-with-babel">Project Setup with Babel</h3>
+<p>In order to get Babel to perform automatic JSX conversion in our project we have to add various plugins and presets. A preset is just a group of Babel plugins. One of which is the React preset. You can test the various presets on the <a href="http://babeljs.io/repl">babel conversion page</a>.<br></p>
+
+<p>All future JSX examples will assume that the project has been configured with the following Babal presets;</p>
+<ul>
+  <li>React</li>
+  <li>ENV (includes by default);
+    <ul>
+      <li>es2015</li>
+      <li>es2016</li>
+      <li>es2017</li>
+    </ul>
+  </li>
+</ul>
+
+<p>To setup the project to use the desired Babel presets, start by generating a package.json file;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd ~/Documents/Development/react-course/indecision-app
+$ yarn init
+</code></pre></div></div>
+<p>There should now be a package.json file in the ~/Documents/Development/react-course/indecision-app/</p>
+
+<ul>
+  <li>Should return something like;</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"indecision-app"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"babel-cli"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.24.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"npm"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.4.1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"test"</span><span class="p">:</span><span class="w"> </span><span class="s2">"echo </span><span class="se">\"</span><span class="s2">Error: no test specified</span><span class="se">\"</span><span class="s2"> &amp;&amp; exit 1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Me"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ISC"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>Should also see a package.json in the project with the json shown above.</li>
+  <li>Install Babel presets;</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ yarn add babel-preset-react@6.24.1
+$ yarn add babel-preset-env@1.5.2
+</code></pre></div></div>
+
+<ul>
+  <li>After running the above commands the package.json file should have two new dependencies;
+    <ul>
+      <li>“babel-preset-env”: “1.5.2”</li>
+      <li>“babel-preset-react”: “6.24.1”</li>
+    </ul>
+  </li>
+  <li>There should also now be a yarn.lock file.</li>
+  <li>Create a new src directory in the project with a new app.js. This file will contain all the react code while /public/scripts/ will contain auto-generated code.</li>
+  <li>Update /src/app.js with;</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'App is running.'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">template</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">JSX</span> <span class="k">from</span> <span class="nx">app</span><span class="p">.</span><span class="nx">js</span><span class="o">!&lt;</span><span class="sr">/p&gt;</span><span class="err">;
+</span><span class="kd">var</span> <span class="nx">appRoot</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'app'</span><span class="p">);</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">template</span><span class="p">,</span> <span class="nx">appRoot</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Clear out the /public/scripts/app.js file. It should be empty.</li>
+  <li>Compile the JSX.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+</code></pre></div></div>
+
+<ul>
+  <li>The –watch argument behaves a little like live-server. It will keep the babel compiler running and any changes made to /src/ will automatically be updated into /public/scripts/</li>
+  <li>If you want to run this on different OS’s you would need to regenerate the node_modules. You can delete the modules and run npm install to re-download all your dependencies.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><svg class="svg-inline--fa fa-calendar-alt fa-w-14 fa-fw" aria-hidden="true" data-prefix="fas" data-icon="calendar-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M436 160H12c-6.6 0-12-5.4-12-12v-36c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48v36c0 6.6-5.4 12-12 12zM12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm116 204c0-6.6-5.4-12-12-12H76c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm0-128c0-6.6-5.4-12-12-12H76c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm128 128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm0-128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm128 128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40zm0-128c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-40z"></path></svg><!-- <i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> --> Updated:</strong> <time datetime="2018-01-01T00:00:00+11:00">January 01, 2018</time></p>
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/JaysonBrenton"><svg class="svg-inline--fa fa-github fa-w-16 fa-fw" aria-hidden="true" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-fw fa-github" aria-hidden="true"></i> --> GitHub</a></li>
+    
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><svg class="svg-inline--fa fa-rss-square fa-w-14 fa-fw" aria-hidden="true" data-prefix="fas" data-icon="rss-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM112 416c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm157.533 0h-34.335c-6.011 0-11.051-4.636-11.442-10.634-5.214-80.05-69.243-143.92-149.123-149.123-5.997-.39-10.633-5.431-10.633-11.441v-34.335c0-6.535 5.468-11.777 11.994-11.425 110.546 5.974 198.997 94.536 204.964 204.964.352 6.526-4.89 11.994-11.425 11.994zm103.027 0h-34.334c-6.161 0-11.175-4.882-11.427-11.038-5.598-136.535-115.204-246.161-251.76-251.76C68.882 152.949 64 147.935 64 141.774V107.44c0-6.454 5.338-11.664 11.787-11.432 167.83 6.025 302.21 141.191 308.205 308.205.232 6.449-4.978 11.787-11.432 11.787z"></path></svg><!-- <i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> --> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2018 Jayson Brenton. Powered by <a href="https://jekyllrb.com/" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="./React Introduction - Reference Archive_files/main.min.js"></script>
+  <script src="./React Introduction - Reference Archive_files/all.js"></script>
+
+
+
+
+
+
+
+
+  
+
+</body></html>

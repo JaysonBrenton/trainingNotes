@@ -1,0 +1,889 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Brain Dump - Reference Archive</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Reference Archive">
+<meta property="og:title" content="Brain Dump">
+<meta property="og:url" content="http://tuono/marklogic/braindump/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="http://tuono/assets/images/reflections2.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-01-04T00:00:00+11:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://tuono/marklogic/braindump/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jayson Brenton",
+      "url": "http://tuono:80",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Reference Archive Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Reference Archive</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/marklogic/" >MarkLogic</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/javascript/" >JavaScript</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/react/" >React</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/tipsntricks"" >Tips n Tricks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://tuono:80/blog"" >Blog</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style=" background-image: url('/assets/images/reflections2.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 class="page__title" itemprop="headline">
+        
+          Brain Dump
+
+        
+      </h1>
+      
+        <p class="page__lead"><br />
+
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Brain Dump">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="January 04, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-list-ul"></i> On This Page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#load-a-document">Load a Document</a></li>
+  <li><a href="#delete-a-document">Delete a Document</a></li>
+  <li><a href="#misc-directories">Misc Directories</a></li>
+  <li><a href="#delete-all-documents">Delete All Documents</a></li>
+  <li><a href="#create-app-db--forests">Create App, DB &amp; Forests</a></li>
+  <li><a href="#create-dummy-data">Create Dummy Data</a></li>
+  <li><a href="#corb">CORB</a></li>
+  <li><a href="#load-data-with-node">Load Data with Node</a>
+    <ul>
+      <li><a href="#xlsx-to-json">XLSX to JSON</a></li>
+      <li><a href="#recursive-data-loader">Recursive Data Loader</a></li>
+    </ul>
+  </li>
+  <li><a href="#read-data-with-node">Read Data with Node</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><br /></p>
+
+<h2 id="load-a-document">Load a Document</h2>
+<p>Load a document from the file system via the Query Console.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Select the database from the Database: drop down list in QQ.</span>
+<span class="nx">declareUpdate</span><span class="p">()</span>
+<span class="kd">let</span> <span class="nx">path</span> <span class="o">=</span> <span class="s1">'~/Downloads/myDoc.xml'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span><span class="na">uri</span> <span class="p">:</span> <span class="s1">'/myDoc.xml'</span><span class="p">}</span>
+<span class="nx">xdmp</span><span class="p">.</span><span class="nx">documentLoad</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span><span class="nx">options</span><span class="p">)</span>
+
+<span class="c1">// Check the document loaded,</span>
+<span class="nx">cts</span><span class="p">.</span><span class="nx">doc</span><span class="p">(</span><span class="s1">'/myDoc.xml'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="delete-a-document">Delete a Document</h2>
+<p>Delete a document from the database via the Query Console.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Select the database from the Database: drop down list in QQ.</span>
+<span class="nx">declareUpdate</span><span class="p">()</span>
+<span class="nx">xdmp</span><span class="p">.</span><span class="nx">documentDelete</span><span class="p">(</span><span class="s1">'/myDoc.xml'</span><span class="p">)</span>
+</code></pre></div></div>
+<h2 id="misc-directories">Misc Directories</h2>
+<p>See <a href="https://docs.marklogic.com/guide/installation/procedures"> here</a> for various install and data directories.</p>
+
+<h2 id="delete-all-documents">Delete All Documents</h2>
+<p>XQuery to delete all documents in a database,</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for $doc in doc() return xdmp:document-delete(xdmp:node-uri($doc))
+</code></pre></div></div>
+
+<h2 id="create-app-db--forests">Create App, DB &amp; Forests</h2>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="cm">/*
+* Author: Jayson Brenton (jayson.careybrenton@marklogic.com)
+* Version: 0.1
+* Date: 2018-07-25
+
+* Purpose:
+  This script will create a modules and content database as well as a http server and n number of forests.
+
+* Functionality:
+  * You can let the script run on against hosts within a cluster or alternately, specify the hosts you wish to run on.
+  * If a database already exists the script continue using the discovered databases.
+  * When creating the app server, the script will check to see if a server already exists. If one is found, checks will be made to confirm the correct content and modules databases are in use and reset if required.
+  * Prior to creating any forests, checks will be made to make sure the host exists in the cluster (if specified manually) and are running.
+  * Any number of forests can be created. The naming convention used is 'databaseName-hostNumber-forestNumber'.
+  * If existing forests are discovered, the forestNumber will be incremented until a name becomes available.
+
+* Usage:
+  * Parameters are set in the variable declarations below.
+  * Set the required number of forests in the forests object.
+  * Set the required hosts in the hosts array. If hosts array is empty, the script will get the hosts names from the cluster.
+*/</span>
+
+<span class="kd">let</span> <span class="nx">admin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"/MarkLogic/admin.xqy"</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">configuration</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">getConfiguration</span><span class="p">();</span>
+<span class="kd">let</span> <span class="nx">appServerName</span> <span class="o">=</span> <span class="s1">'testAppServer'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">appServerPort</span> <span class="o">=</span> <span class="mi">8089</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">urlRewriter</span> <span class="o">=</span> <span class="s1">'/url_rewriter.sys'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">groupName</span> <span class="o">=</span> <span class="s1">'Default'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">conDBId</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">modDBId</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">groupId</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">appServerId</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">databases</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">contentDatabase</span><span class="p">:</span><span class="s1">'test'</span><span class="p">,</span>
+  <span class="na">modulesDatabase</span><span class="p">:</span><span class="s1">'test-modules'</span><span class="p">,</span>
+  <span class="na">securityDatabase</span><span class="p">:</span><span class="s1">'Security'</span><span class="p">,</span>
+  <span class="na">schemaDatabase</span><span class="p">:</span><span class="s1">'Schemas'</span>
+<span class="p">};</span>
+<span class="kd">let</span> <span class="nx">forests</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">content</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="na">modules</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">};</span>
+<span class="c1">//let hosts = ['dodgyName1','dodgyName2','myValidHostName'];</span>
+<span class="kd">let</span> <span class="nx">hosts</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="cm">/* Create the db */</span>
+<span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Process Databases'</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+<span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">databases</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">curDBName</span> <span class="o">=</span> <span class="nx">databases</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+  <span class="kd">let</span> <span class="nx">curDBId</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">secDBId</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">schDBId</span><span class="p">;</span>
+
+  <span class="c1">// Don't try to create either the security or schemas db's. Just content and modules</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">curDBName</span> <span class="o">==</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">securityDatabase</span> <span class="o">||</span> <span class="nx">curDBName</span> <span class="o">==</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">schemaDatabase</span><span class="p">)){</span>
+    <span class="c1">// Get the security database id</span>
+    <span class="nx">secDBId</span> <span class="o">=</span> <span class="nx">xdmp</span><span class="p">.</span><span class="nx">database</span><span class="p">(</span><span class="nx">databases</span><span class="p">.</span><span class="nx">securityDatabase</span><span class="p">);</span>
+
+    <span class="c1">// Get the schema db id</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">curDBName</span> <span class="o">==</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">modulesDatabase</span><span class="p">){</span>
+      <span class="c1">// Don't want schema on the modules database</span>
+      <span class="nx">schDBId</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+      <span class="nx">schDBId</span> <span class="o">=</span> <span class="nx">xdmp</span><span class="p">.</span><span class="nx">database</span><span class="p">(</span><span class="nx">databases</span><span class="p">.</span><span class="nx">schemaDatabase</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="c1">// Check if db exists</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">admin</span><span class="p">.</span><span class="nx">databaseExists</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">curDBName</span><span class="p">)){</span>
+      <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Database '</span><span class="p">${</span><span class="nx">curDBName</span><span class="p">}</span><span class="s2">' already exists in config.`</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+      <span class="c1">// Create db</span>
+      <span class="nx">configuration</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">databaseCreate</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">curDBName</span><span class="p">,</span><span class="nx">secDBId</span><span class="p">,</span><span class="nx">schDBId</span><span class="p">);</span>
+      <span class="nx">admin</span><span class="p">.</span><span class="nx">saveConfiguration</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+      <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Database '</span><span class="p">${</span><span class="nx">curDBName</span><span class="p">}</span><span class="s2">' created.`</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="c1">// Get content/modules dbIds</span>
+    <span class="k">switch</span><span class="p">(</span><span class="nx">curDBName</span><span class="p">){</span>
+      <span class="k">case</span> <span class="nx">databases</span><span class="p">.</span><span class="na">contentDatabase</span><span class="p">:</span>
+        <span class="nx">conDBId</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">databaseGetId</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">curDBName</span><span class="p">);</span>
+        <span class="c1">//break;</span>
+      <span class="k">case</span> <span class="nx">databases</span><span class="p">.</span><span class="na">modulesDatabase</span><span class="p">:</span>
+        <span class="nx">modDBId</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">databaseGetId</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">curDBName</span><span class="p">);</span>
+        <span class="c1">//break;</span>
+    <span class="p">};</span>
+  <span class="p">};</span>
+<span class="p">});</span>
+
+<span class="cm">/* Create app server */</span>
+<span class="c1">// Test if server already exists</span>
+<span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Process App Server'</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">admin</span><span class="p">.</span><span class="nx">appserverExists</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">groupGetId</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">groupName</span><span class="p">),</span> <span class="nx">appServerName</span><span class="p">)){</span>
+  <span class="nx">appServerId</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">appserverGetId</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">groupId</span><span class="p">,</span><span class="nx">appServerName</span><span class="p">);</span>
+  <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`App server '</span><span class="p">${</span><span class="nx">appServerName</span><span class="p">}</span><span class="s2">' already exists in config.`</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+
+  <span class="c1">// Make sure the databases are set correctly</span>
+  <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">databases</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">){</span>
+    <span class="kd">let</span> <span class="nx">dbName</span><span class="p">;</span>
+
+    <span class="k">switch</span><span class="p">(</span><span class="nx">databases</span><span class="p">[</span><span class="nx">key</span><span class="p">]){</span>
+      <span class="k">case</span> <span class="nx">databases</span><span class="p">.</span><span class="na">modulesDatabase</span><span class="p">:</span> <span class="c1">// Reset the modules DB if required</span>
+        <span class="nx">dbName</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">databaseGetName</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">admin</span><span class="p">.</span><span class="nx">appserverGetModulesDatabase</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">appServerId</span><span class="p">));</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">dbName</span> <span class="o">!=</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">modulesDatabase</span><span class="p">){</span>
+          <span class="nx">configuration</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">appserverSetModulesDatabase</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">appServerId</span><span class="p">,</span><span class="nx">admin</span><span class="p">.</span><span class="nx">databaseGetId</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">databases</span><span class="p">.</span><span class="nx">modulesDatabase</span><span class="p">));</span>
+          <span class="nx">admin</span><span class="p">.</span><span class="nx">saveConfiguration</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+          <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`App server: </span><span class="p">${</span><span class="nx">appServerName</span><span class="p">}</span><span class="s2"> modules DB was incorrect. Was: '</span><span class="p">${</span><span class="nx">dbName</span><span class="p">}</span><span class="s2">'. Reset to: '</span><span class="p">${</span><span class="nx">databases</span><span class="p">.</span><span class="nx">modulesDatabase</span><span class="p">}</span><span class="s2">' `</span><span class="p">,</span><span class="s1">'warning'</span><span class="p">);</span>
+        <span class="p">};</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="nx">databases</span><span class="p">.</span><span class="na">contentDatabase</span><span class="p">:</span> <span class="c1">// Reset the content DB if required</span>
+        <span class="nx">dbName</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">databaseGetName</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">admin</span><span class="p">.</span><span class="nx">appserverGetDatabase</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">appServerId</span><span class="p">));</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">dbName</span> <span class="o">!=</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">contentDatabase</span><span class="p">){</span>
+          <span class="nx">configuration</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">appserverSetDatabase</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">appServerId</span><span class="p">,</span><span class="nx">admin</span><span class="p">.</span><span class="nx">databaseGetId</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">databases</span><span class="p">.</span><span class="nx">contentDatabase</span><span class="p">));</span>
+          <span class="nx">admin</span><span class="p">.</span><span class="nx">saveConfiguration</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+          <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`App server: </span><span class="p">${</span><span class="nx">appServerName</span><span class="p">}</span><span class="s2"> content DB was incorrect. Was: '</span><span class="p">${</span><span class="nx">dbName</span><span class="p">}</span><span class="s2">'. Reset to: '</span><span class="p">${</span><span class="nx">databases</span><span class="p">.</span><span class="nx">contentDatabase</span><span class="p">}</span><span class="s2">' `</span><span class="p">,</span><span class="s1">'warning'</span><span class="p">);</span>
+        <span class="p">};</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">};</span>
+  <span class="p">});</span>
+<span class="p">}</span><span class="k">else</span><span class="p">{</span>
+  <span class="c1">// Create app server</span>
+  <span class="nx">configuration</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">httpServerCreate</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">admin</span><span class="p">.</span><span class="nx">groupGetId</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">groupName</span><span class="p">),</span><span class="nx">appServerName</span><span class="p">,</span><span class="s1">'/'</span><span class="p">,</span><span class="nx">appServerPort</span><span class="p">,</span><span class="nx">modDBId</span><span class="p">,</span><span class="nx">conDBId</span><span class="p">);</span>
+  <span class="nx">admin</span><span class="p">.</span><span class="nx">saveConfiguration</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+  <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`App server '</span><span class="p">${</span><span class="nx">appServerName</span><span class="p">}</span><span class="s2">' created.`</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+
+  <span class="c1">// Set url rewriter</span>
+  <span class="nx">configuration</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">appserverSetUrlRewriter</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">admin</span><span class="p">.</span><span class="nx">appserverGetId</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">groupId</span><span class="p">,</span><span class="nx">appServerName</span><span class="p">),</span><span class="nx">urlRewriter</span><span class="p">);</span>
+  <span class="nx">admin</span><span class="p">.</span><span class="nx">saveConfiguration</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="cm">/* Create Forests */</span>
+<span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Process Forests'</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+
+<span class="c1">//Get the hosts within the cluster if not set manually.</span>
+<span class="k">if</span><span class="p">(</span><span class="nx">hosts</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+  <span class="nx">xdmp</span><span class="p">.</span><span class="nx">hosts</span><span class="p">().</span><span class="nx">toObject</span><span class="p">().</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">){</span>
+    <span class="nx">hosts</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">xdmp</span><span class="p">.</span><span class="nx">hostName</span><span class="p">(</span><span class="nx">id</span><span class="p">));</span>
+  <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="c1">// Test hosts are valid and up.</span>
+<span class="c1">// Remove invalid hosts from host array</span>
+<span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">hosts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">i</span><span class="o">--</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nx">admin</span><span class="p">.</span><span class="nx">hostExists</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">hosts</span><span class="p">[</span><span class="nx">i</span><span class="p">]))){</span>
+    <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Host '</span><span class="p">${</span><span class="nx">hosts</span><span class="p">[</span><span class="nx">i</span><span class="p">]}</span><span class="s2">' is not valid.`</span><span class="p">,</span><span class="s1">'error'</span><span class="p">);</span>
+    <span class="nx">hosts</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">xdmp</span><span class="p">.</span><span class="nx">hostStatus</span><span class="p">(</span><span class="nx">xdmp</span><span class="p">.</span><span class="nx">host</span><span class="p">(</span><span class="nx">hosts</span><span class="p">[</span><span class="nx">i</span><span class="p">])).</span><span class="nx">toString</span><span class="p">().</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'XDMP-HOSTOFFLINE'</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
+      <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Host '</span><span class="p">${</span><span class="nx">hosts</span><span class="p">[</span><span class="nx">i</span><span class="p">]}</span><span class="s2">' is down.`</span><span class="p">,</span><span class="s1">'error'</span><span class="p">);</span>
+      <span class="nx">hosts</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>  
+    <span class="p">};</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="c1">// Start forest creation</span>
+<span class="kd">let</span> <span class="nx">hostNumber</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">hosts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+  <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Current host: '</span><span class="p">${</span><span class="nx">hosts</span><span class="p">[</span><span class="nx">i</span><span class="p">]}</span><span class="s2">'.`</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">hostName</span> <span class="o">=</span> <span class="nx">hosts</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+
+  <span class="c1">// Iterate the forests object to get the required number of forests for each database</span>
+  <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">forests</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">numForestsRequired</span> <span class="o">=</span> <span class="nx">forests</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+    <span class="kd">let</span> <span class="nx">curForType</span> <span class="o">=</span> <span class="nx">key</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">dbId</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">dbName</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">forestNames</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="kd">let</span> <span class="nx">forestNumber</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">switch</span><span class="p">(</span><span class="nx">key</span><span class="p">){</span>
+      <span class="k">case</span> <span class="s1">'content'</span><span class="p">:</span>
+        <span class="nx">dbId</span> <span class="o">=</span> <span class="nx">xdmp</span><span class="p">.</span><span class="nx">database</span><span class="p">(</span><span class="nx">databases</span><span class="p">.</span><span class="nx">contentDatabase</span><span class="p">);</span>
+        <span class="nx">dbName</span> <span class="o">=</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">contentDatabase</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="s1">'modules'</span><span class="p">:</span>
+        <span class="nx">dbId</span> <span class="o">=</span> <span class="nx">xdmp</span><span class="p">.</span><span class="nx">database</span><span class="p">(</span><span class="nx">databases</span><span class="p">.</span><span class="nx">modulesDatabase</span><span class="p">);</span>
+        <span class="nx">dbName</span> <span class="o">=</span> <span class="nx">databases</span><span class="p">.</span><span class="nx">modulesDatabase</span><span class="p">;</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Current database: '</span><span class="p">${</span><span class="nx">dbName</span><span class="p">}</span><span class="s2">'.`</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">numForestsRequired</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+      <span class="c1">// Get existing forest names.</span>
+      <span class="nx">admin</span><span class="p">.</span><span class="nx">getForestIds</span><span class="p">(</span><span class="nx">configuration</span><span class="p">).</span><span class="nx">toObject</span><span class="p">().</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">){</span>
+        <span class="nx">forestNames</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">admin</span><span class="p">.</span><span class="nx">forestGetName</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">id</span><span class="p">));</span>
+      <span class="p">});</span>
+
+      <span class="kd">let</span> <span class="nx">forestName</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">dbName</span><span class="p">}</span><span class="s2">-</span><span class="p">${</span><span class="nx">hostNumber</span><span class="p">}</span><span class="s2">-</span><span class="p">${</span><span class="nx">forestNumber</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+      <span class="c1">// Get an available forest name</span>
+      <span class="k">do</span><span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">forestNames</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">forestName</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
+          <span class="c1">//xdmp.log(`Name unavailable: ${forestName}`,'info');</span>
+          <span class="nx">forestName</span> <span class="o">=</span> <span class="s2">`</span><span class="p">${</span><span class="nx">dbName</span><span class="p">}</span><span class="s2">-</span><span class="p">${</span><span class="nx">hostNumber</span><span class="p">}</span><span class="s2">-</span><span class="p">${</span><span class="nx">n</span><span class="o">+</span><span class="mi">1</span><span class="p">}</span><span class="s2">`</span><span class="p">;</span>
+          <span class="c1">//xdmp.log(`Trying: '${forestName}'`,'info');</span>
+
+        <span class="p">};</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">forestNames</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">forestName</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
+          <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Forest name available: '</span><span class="p">${</span><span class="nx">forestName</span><span class="p">}</span><span class="s2">'`</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+          <span class="k">break</span><span class="p">;</span>
+        <span class="p">};</span>
+        <span class="nx">n</span> <span class="o">++</span><span class="p">;</span>
+      <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="nx">n</span> <span class="o">&lt;=</span> <span class="nx">forestNames</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+
+      <span class="c1">// Create the forest</span>
+      <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Create forest: </span><span class="p">${</span><span class="nx">forestName</span><span class="p">}</span><span class="s2">`</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+      <span class="nx">configuration</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">forestCreate</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span><span class="nx">forestName</span><span class="p">,</span><span class="nx">xdmp</span><span class="p">.</span><span class="nx">host</span><span class="p">(</span><span class="nx">hostName</span><span class="p">),</span><span class="kc">null</span><span class="p">,</span><span class="kc">null</span><span class="p">,</span><span class="kc">null</span><span class="p">);</span>
+      <span class="nx">admin</span><span class="p">.</span><span class="nx">saveConfiguration</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+
+      <span class="c1">//Attach forests to database</span>
+      <span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`Attach forest: </span><span class="p">${</span><span class="nx">forestName</span><span class="p">}</span><span class="s2"> to '</span><span class="p">${</span><span class="nx">dbName</span><span class="p">}</span><span class="s2">'`</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+      <span class="nx">configuration</span> <span class="o">=</span> <span class="nx">admin</span><span class="p">.</span><span class="nx">databaseAttachForest</span><span class="p">(</span><span class="nx">configuration</span><span class="p">,</span> <span class="nx">xdmp</span><span class="p">.</span><span class="nx">database</span><span class="p">(</span><span class="nx">dbName</span><span class="p">),</span><span class="nx">xdmp</span><span class="p">.</span><span class="nx">forest</span><span class="p">(</span><span class="nx">forestName</span><span class="p">));</span>
+      <span class="nx">admin</span><span class="p">.</span><span class="nx">saveConfiguration</span><span class="p">(</span><span class="nx">configuration</span><span class="p">);</span>
+
+      <span class="nx">forestNumber</span> <span class="o">=</span> <span class="nx">n</span><span class="p">;</span>
+    <span class="p">};</span>
+  <span class="p">});</span>
+  <span class="nx">hostNumber</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="nx">xdmp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'###COMPLETE###'</span><span class="p">,</span><span class="s1">'info'</span><span class="p">);</span>
+<span class="s1">'Complete'</span>
+</code></pre></div></div>
+
+<h2 id="create-dummy-data">Create Dummy Data</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">'use strict'</span><span class="p">;</span>
+
+<span class="nx">declareUpdate</span><span class="p">();</span>
+
+<span class="nb">Date</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">addSeconds</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">secondsToAdd</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">newDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+  <span class="nx">newDate</span><span class="p">.</span><span class="nx">setSeconds</span><span class="p">(</span><span class="nx">newDate</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">()</span> <span class="o">+</span> <span class="nx">secondsToAdd</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">newDate</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">departments</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"IT"</span><span class="p">,</span><span class="s2">"HR"</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">states</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"NSW"</span><span class="p">,</span> <span class="s2">"Vic"</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">serverTypes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Email"</span><span class="p">,</span> <span class="s2">"MarkLogic"</span><span class="p">];</span>
+
+<span class="kd">var</span> <span class="nx">documents</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="kd">var</span> <span class="nx">packetsCount</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">startDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+
+<span class="nx">departments</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">department</span><span class="p">){</span>
+  <span class="nx">states</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span>
+    <span class="nx">serverTypes</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">serverType</span><span class="p">){</span>
+      <span class="kd">var</span> <span class="nx">currentValue</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+      <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">packetNumber</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">packetNumber</span> <span class="o">&lt;</span> <span class="nx">packetsCount</span><span class="p">;</span> <span class="nx">packetNumber</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">currentValue</span> <span class="o">=</span> <span class="nx">currentValue</span> <span class="o">+</span> <span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">11</span><span class="p">)));</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">currentValue</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">currentValue</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">currentValue</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">)</span> <span class="nx">currentValue</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+        <span class="nx">documents</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+          <span class="s2">"department"</span><span class="p">:</span> <span class="nx">department</span><span class="p">,</span>
+          <span class="s2">"state"</span><span class="p">:</span> <span class="nx">state</span><span class="p">,</span>
+          <span class="s2">"serverType"</span><span class="p">:</span> <span class="nx">serverType</span><span class="p">,</span>
+          <span class="s2">"created"</span><span class="p">:</span> <span class="nx">startDate</span><span class="p">.</span><span class="nx">addSeconds</span><span class="p">(</span><span class="nx">packetNumber</span> <span class="o">*-</span><span class="mi">1</span><span class="p">),</span>
+          <span class="s2">"percent"</span><span class="p">:</span> <span class="nx">currentValue</span>
+        <span class="p">})</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+
+<span class="nx">documents</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nb">document</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">uri</span> <span class="o">=</span> <span class="s2">"/packets/"</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">department</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">state</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">created</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="s2">".json"</span><span class="p">;</span>
+  <span class="nx">xdmp</span><span class="p">.</span><span class="nx">documentInsert</span><span class="p">(</span>
+    <span class="nx">uri</span><span class="p">,</span>
+    <span class="nb">document</span>
+  <span class="p">);</span>
+
+  <span class="k">return</span> <span class="p">([</span><span class="nb">document</span><span class="p">.</span><span class="nx">department</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">state</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">serverType</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">created</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">percent</span><span class="p">]).</span><span class="nx">join</span><span class="p">(</span><span class="s2">" "</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s2">"</span><span class="err">\</span><span class="s2">n"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="corb">CORB</h2>
+<p>Detailed usage notes can be found <a href="https://developer.marklogic.com/code/corb/">here</a>.</p>
+
+<ul>
+  <li>corb.properties</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>XCC-CONNECTION-URI=xcc://&lt;userName&gt;:&lt;pWord&gt;@&lt;host&gt;:&lt;port&gt;/   
+THREAD-COUNT=20
+MODULE-ROOT=/
+MODULES-DATABASE=data-hub-MODULES
+URIS-MODULE=getURIs.xqy|ADHOC
+PROCESS-MODULE=transform.xqy|ADHOC
+</code></pre></div></div>
+
+<ul>
+  <li>getURIs.xqy</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xquery version "1.0-ml";
+let collection_name := 'REGNS'
+let rev_type_property_name := 'REVENUE_TYPE'
+let rev_type_property_value := 'L'
+let red_ind_property_name := 'REDUNDANCY_IND'
+let red_ind_property_value := ''
+
+(: let $uris := cts:uris("",(),cts:collection-query("UNITY-UNMATCHED")) :)
+
+let $uris := cts:uris("",(),cts.search(cts.andQuery([
+  cts.collectionQuery(collection_name),
+  cts.jsonPropertyValueQuery( rev_type_property_name, rev_type_property_value ),
+  cts.jsonPropertyValueQuery( red_ind_property_name, red_ind_property_value )
+])))
+
+return (count($uris), $uris)
+</code></pre></div></div>
+
+<ul>
+  <li>transform.xqy</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xquery version "1.0-ml";
+declare variable $URI as xs:string external;
+xdmp:document-delete($URI)
+</code></pre></div></div>
+
+<h2 id="load-data-with-node">Load Data with Node</h2>
+
+<p>The MarkLogic node.js client API can be found <a href="https://developer.marklogic.com/products/node/">here</a>.</p>
+
+<h3 id="xlsx-to-json">XLSX to JSON</h3>
+
+<p>Need to load xlsx as JSON into MarkLogic? Here you go,</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// npm i marklogic --save</span>
+<span class="c1">// npm i throttled-queue --save</span>
+<span class="c1">// npm i xlsx-to-json --save</span>
+
+<span class="kd">const</span> <span class="nx">xlsxj</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"xlsx-to-json"</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">tq</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'throttled-queue'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./settings'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">ml</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'Marklogic'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">dbWrite</span> <span class="o">=</span> <span class="nx">ml</span><span class="p">.</span><span class="nx">createDatabaseClient</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">local</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">throttle</span> <span class="o">=</span> <span class="nx">tq</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span><span class="na">input</span><span class="p">:</span><span class="s2">"./data/book1.xlsx"</span><span class="p">,</span> <span class="na">output</span><span class="p">:</span> <span class="s2">"./output/book1.json"</span><span class="p">};</span>
+<span class="kd">var</span> <span class="nx">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">result</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span><span class="p">{</span>
+    <span class="nx">buildDocs</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">buildDocs</span><span class="p">(</span><span class="nx">doc</span><span class="p">){</span>
+  <span class="kd">let</span> <span class="nx">newJSONDoc</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="nx">doc</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">d</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">eventID</span> <span class="o">=</span> <span class="nx">d</span><span class="p">.</span><span class="nx">eventid</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">date</span> <span class="o">=</span> <span class="nx">eventID</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'-'</span> <span class="o">+</span> <span class="nx">eventID</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'-'</span> <span class="o">+</span> <span class="nx">eventID</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">time</span> <span class="o">=</span> <span class="nx">genRandomTime</span><span class="p">();</span>
+    <span class="kd">let</span> <span class="nx">dateTime</span> <span class="o">=</span> <span class="nx">date</span> <span class="o">+</span> <span class="nx">time</span><span class="p">;</span>
+    <span class="nx">newJSONDoc</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span>
+      <span class="p">{</span>
+        <span class="na">eventID</span><span class="p">:</span> <span class="nx">eventID</span><span class="p">,</span>
+        <span class="na">date</span><span class="p">:</span> <span class="nx">dateTime</span><span class="p">,</span>
+        <span class="p">...</span>
+      <span class="p">}</span>
+    <span class="p">);</span>
+  <span class="p">});</span>
+
+  <span class="nx">writeToML</span><span class="p">(</span><span class="nx">newJSONDoc</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">genNum</span><span class="p">(</span><span class="nx">max</span><span class="p">){</span>
+  <span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="mi">0</span><span class="p">)).</span><span class="nx">toString</span><span class="p">();</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">i</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">){</span>
+    <span class="nx">i</span> <span class="o">=</span> <span class="s1">'0'</span> <span class="o">+</span> <span class="nx">i</span>
+  <span class="p">};</span>
+  <span class="k">return</span> <span class="nx">i</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">genRandomTime</span><span class="p">(){</span>
+  <span class="kd">let</span> <span class="nx">time</span><span class="p">;</span>
+  <span class="kd">let</span> <span class="nx">hours</span> <span class="o">=</span> <span class="nx">genNum</span><span class="p">(</span><span class="mi">24</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">mins</span> <span class="o">=</span> <span class="nx">genNum</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">secs</span> <span class="o">=</span> <span class="nx">genNum</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
+
+  <span class="nx">time</span> <span class="o">=</span> <span class="s2">`T</span><span class="p">${</span><span class="nx">hours</span><span class="p">}</span><span class="s2">:</span><span class="p">${</span><span class="nx">mins</span><span class="p">}</span><span class="s2">:</span><span class="p">${</span><span class="nx">secs</span><span class="p">}</span><span class="s2">Z`</span>
+
+  <span class="k">return</span> <span class="nx">time</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">writeToML</span><span class="p">(</span><span class="nx">doc</span><span class="p">){</span>
+  <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="nx">throttle</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+      <span class="kd">let</span> <span class="nx">uri</span> <span class="o">=</span> <span class="s2">`/</span><span class="p">${</span><span class="nx">doc</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">eventID</span><span class="p">}</span><span class="s2">.json`</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">uri</span><span class="p">);</span>
+
+      <span class="nx">dbWrite</span><span class="p">.</span><span class="nx">documents</span><span class="p">.</span><span class="nx">write</span><span class="p">({</span>
+        <span class="na">uri</span><span class="p">:</span> <span class="nx">uri</span><span class="p">,</span>
+        <span class="na">contentType</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span>
+        <span class="na">content</span><span class="p">:</span> <span class="nx">doc</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+      <span class="p">}).</span><span class="nx">result</span><span class="p">()</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">))</span>
+      <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+    <span class="p">});</span>
+  <span class="p">};</span>
+<span class="p">};</span>
+
+<span class="nx">xlsxj</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Couple of issues were encountered while writing this one. The first problem was memory issues from node when run against xlsx larger than around 20mb. Watching the node process memory I could see it increase up to a maximum of around 4GB. Node has a defult memory limit of 512MB. When run, the app would throw the following error,<br /></p>
+
+<p><span style="color:red">FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory</span><br /></p>
+
+<p>To workaround this problem, run node as follows,</p>
+
+<ul>
+  <li><em>node <strong>–max-old-space-size=4096</strong> app.js</em><br /></li>
+</ul>
+
+<p>After getting around this little problem I started to encounter errors which at first glance appeared to be resource related. When the app was run against xlsx of around 20MB errors like this would be reported,</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ Error: read ECONNRESET
+    at TCP.onread (net.js:602:25) errno: 'ECONNRESET', code: 'ECONNRESET', syscall: 'read' }
+</code></pre></div></div>
+<p>ECONNRESET means that the connection was closed. But why? I suspected I was throwing to many requests to quickly for the DB to handle. <br /></p>
+
+<p>And on anything much larger than 20MB, I found further errors like,</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ Error: connect EMFILE 127.0.0.1:8070 - Local (undefined:undefined)
+    at internalConnect (net.js:940:16)
+    at defaultTriggerAsyncIdScope (internal/async_hooks.js:281:19)
+    at GetAddrInfoReqWrap.emitLookup [as callback] (net.js:1093:9)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:72:10)
+  errno: 'EMFILE',
+  code: 'EMFILE',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 8070 }
+</code></pre></div></div>
+<p>The error code <strong>EMFILE</strong> means that a process is trying to open too many files and the system has not allocated enough file handlers to cater for the app. I could have looked to increase the limits but thought a better solution was to try to control it from the app instead.<br /></p>
+
+<p>These errors suggested to me that I needed to be able to throttle my requests to the database. I ended up implementing the <a href="https://www.npmjs.com/package/throttled-queue">throttled-queue</a> library. The only issue now is that the app does not exit after completion of the load but that’s a problem for another day.</p>
+
+<h3 id="recursive-data-loader">Recursive Data Loader</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//settings.js</span>
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">database</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">host</span><span class="p">:</span> <span class="s1">'localhost'</span><span class="p">,</span>
+        <span class="na">port</span><span class="p">:</span> <span class="mi">8095</span><span class="p">,</span>
+        <span class="na">user</span><span class="p">:</span> <span class="s1">'username'</span><span class="p">,</span>
+        <span class="na">password</span><span class="p">:</span> <span class="s1">'pword'</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">options</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//app.js</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'fs'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">settings</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./settings'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">marklogic</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'marklogic'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">dbWrite</span> <span class="o">=</span> <span class="nx">marklogic</span><span class="p">.</span><span class="nx">createDatabaseClient</span><span class="p">(</span><span class="nx">settings</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">decMapModules</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">extFilter</span> <span class="o">=</span> <span class="s1">'.sjs'</span>
+<span class="kd">const</span> <span class="nx">myPath</span> <span class="o">=</span> <span class="s1">'/Development/JavaScript/someProject/src/main/ml-modules/'</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">dirwalker</span><span class="p">(</span><span class="nx">dir</span><span class="p">,</span> <span class="nx">done</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">results</span> <span class="o">=</span> <span class="p">[];</span>
+
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">readdir</span><span class="p">(</span><span class="nx">dir</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">list</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">done</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+
+        <span class="kd">var</span> <span class="nx">pending</span> <span class="o">=</span> <span class="nx">list</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">pending</span><span class="p">)</span> <span class="k">return</span> <span class="nx">done</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+
+        <span class="nx">list</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">file</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">dir</span><span class="p">,</span> <span class="nx">file</span><span class="p">);</span>
+
+            <span class="nx">fs</span><span class="p">.</span><span class="nx">stat</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stat</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// If directory, execute a recursive call</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">stat</span> <span class="o">&amp;&amp;</span> <span class="nx">stat</span><span class="p">.</span><span class="nx">isDirectory</span><span class="p">())</span> <span class="p">{</span>
+                    <span class="nx">dirwalker</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">results</span> <span class="o">=</span> <span class="nx">results</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="o">!--</span><span class="nx">pending</span><span class="p">)</span> <span class="nx">done</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+                    <span class="p">});</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">extFilter</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">){</span>
+                        <span class="nx">results</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
+
+                        <span class="nx">writeFile</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span>
+                    <span class="p">}</span>
+                    <span class="c1">// !-- decrement pending</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="o">!--</span><span class="nx">pending</span><span class="p">)</span> <span class="nx">done</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">results</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">writeFile</span><span class="p">(</span><span class="nx">file</span><span class="p">){</span>
+    <span class="c1">// Modify to build the uri you require</span>
+    <span class="nx">uri</span> <span class="o">=</span> <span class="nx">file</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">file</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'root'</span><span class="p">)</span><span class="o">+</span><span class="mi">4</span><span class="p">);</span>
+    <span class="nx">content</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span><span class="s1">'utf8'</span><span class="p">);</span>
+
+    <span class="c1">// Write the content to MarkLogic</span>
+    <span class="nx">dbWrite</span><span class="p">.</span><span class="nx">documents</span><span class="p">.</span><span class="nx">write</span><span class="p">({</span>
+        <span class="na">uri</span><span class="p">:</span> <span class="nx">uri</span><span class="p">,</span>
+        <span class="na">contentType</span><span class="p">:</span> <span class="s1">'application/text'</span><span class="p">,</span>
+        <span class="na">content</span><span class="p">:</span> <span class="nx">content</span>
+    <span class="p">}).</span><span class="nx">result</span><span class="p">()</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">))</span>
+    <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+<span class="p">};</span>
+
+<span class="nx">dirwalker</span><span class="p">(</span><span class="nx">myPath</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+        <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h2 id="read-data-with-node">Read Data with Node</h2>
+
+<p>The MarkLogic node.js client API can be found <a href="https://developer.marklogic.com/products/node/">here</a>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd &lt;into the project directory&gt;
+$ npm i markLogic
+</code></pre></div></div>
+
+<p>Create the dependency for the MarkLogic node.js client,</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">marklogic</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'marklogic'</span><span class="p">),</span>
+</code></pre></div></div>
+
+<p>Create a Database Connection;</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">db</span> <span class="o">=</span> <span class="nx">marklogic</span><span class="p">.</span><span class="nx">createDatabaseClient</span><span class="p">({</span>
+ <span class="na">host</span><span class="p">:</span> <span class="s1">'localhost'</span><span class="p">,</span>
+ <span class="na">port</span><span class="p">:</span> <span class="mi">8075</span><span class="p">,</span>
+ <span class="na">user</span><span class="p">:</span> <span class="s1">'username'</span><span class="p">,</span>
+ <span class="na">password</span><span class="p">:</span> <span class="s1">'password'</span><span class="p">,</span>
+ <span class="na">authType</span><span class="p">:</span> <span class="s1">'digest'</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Execute the read,</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">uri</span> <span class="o">=</span> <span class="s1">'/testing/documentOne'</span><span class="p">;</span>
+<span class="nx">db</span><span class="p">.</span><span class="nx">documents</span><span class="p">.</span><span class="nx">read</span><span class="p">(</span><span class="nx">uri</span><span class="p">).</span><span class="nx">result</span><span class="p">()</span>
+ <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">))</span>
+ <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-01-04T00:00:00+11:00">January 04, 2018</time></p>
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/JaysonBrenton"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Jayson Brenton. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

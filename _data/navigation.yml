@@ -8,8 +8,6 @@ main:
   #  url: /year-archive/
   #- title: "Sample Collections"
   #  url: /collection-archive/
-  - title: "MarkLogic"
-    url: /marklogic/
   - title: "JavaScript"
     url: /javascript/
   - title: "React"

@@ -9,7 +9,7 @@ toc_icon: "list-ul"  # corresponding Font Awesome icon name (without fa prefix)
 date: 2019-09-01
 sidebar:
   - title: ""
-    image: /assets/images/daFuck.png
+    #image: /assets/images/daFuck.png
     image_alt: "image"
     text: ""
 header:

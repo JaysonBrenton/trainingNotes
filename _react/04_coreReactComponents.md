@@ -213,7 +213,6 @@ class App extends Component {
         <h1>I am a react app</h1>
         <Person name='Joe' age='48' address='1 Somewhere St, Somewhere'/>
       </div>
-
     );
   }
 }
@@ -254,7 +253,6 @@ class App extends Component {
         <h1>I am a react app</h1>
         <Person name='Joe' age='48' address='1 Somewhere St, Somewhere'>My hobbies are: racing</Person>
       </div>
-
     );
   }
 }
@@ -282,6 +280,46 @@ export default person;
 
 ## Working with State
 
-State is managed from inside a component.
+In previous sections, props have been hardcoded in the JSX. Rather than hardcoding, you would want to populate the props based on some variable's value. When working with a class, you cannot define properties using let/const but instead,
+
+```javascript
+//App.js
+class App extends Component {
+  myProp1 = 'abcd'
+  render() {
+    return (
+      <div className="App">
+        <h1>I am a react app</h1>
+        <Person name='Joe' age='48' address='1 Somewhere St, Somewhere'>My hobbies are: racing</Person>
+      </div>
+    );
+  }
+}
+```
+
+There is one property that can be defined in any component which extends React.Component. That is 'state'. While props are set and passed from outside the component, state is managed from inside the component.
+
+```javascript
+//App.js
+class App extends Component {
+  state = {
+    persons:[
+      { name: 'Joe', age: 28, address: '1 Somewhere St, Somewhere'},
+      { name: 'Jane', age: 29, address: '2 Somewhere St, Somewhere'},
+      { name: 'Bob', age: 35, address: '3 Somewhere St, Somewhere'}
+    ]
+  };
+  render() {
+    return (
+      <div className="App">
+        <h1>I am a react app</h1>
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age} address={this.state.persons[0].address}>My hobbies are: racing</Person>
+      </div>
+    );
+  }
+}
+```
+
+State is managed from inside a component and must be a JS object.
 
 **Note:** State is a reserved word.

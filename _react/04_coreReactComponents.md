@@ -314,12 +314,91 @@ class App extends Component {
       <div className="App">
         <h1>I am a react app</h1>
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} address={this.state.persons[0].address}>My hobbies are: racing</Person>
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age} address={this.state.persons[1].address} />
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age} address={this.state.persons[2].address} />
       </div>
     );
   }
 }
 ```
 
-State is managed from inside a component and must be a JS object.
-
 **Note:** State is a reserved word.
+
+## Handling Events
+
+* In normal HTML, a button can have an ```onclick()``` event. In JSX in must be ```onClick()```.
+* The naming convention for you event methods would be something like ```switchNameHandler()```.
+
+```javascript
+//App.js
+class App extends Component {
+  state = {
+    persons:[
+      { name: 'Joe', age: 28, address: '1 Somewhere St, Somewhere'},
+      { name: 'Jane', age: 29, address: '2 Somewhere St, Somewhere'},
+      { name: 'Bob', age: 35, address: '3 Somewhere St, Somewhere'}
+    ]
+  };
+  switchNameHandler = () => {
+    console.log("was clicked");
+  };
+  render() {
+    return (
+      <div className="App">
+        <h1>I am a react app</h1>
+        <button onClick={this.switchNameHandler}>Select Name</button>
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age} address={this.state.persons[0].address}>My hobbies are: racing</Person>
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age} address={this.state.persons[1].address} />
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age} address={this.state.persons[2].address} />
+      </div>
+    );
+  }
+}
+```
+
+**Note:** If you call your event handler like this, ```onClick={this.switchNameHandler()}``` rather than ```onClick={this.switchNameHandler}```, it would cause react to render the component as immediately. Instead, we just want to pass a reference. In other words, ```this.switchNameHandler``` is a reference to the ```switchNameHandler = () => { };``` function (the function has been assigned to the **switchNameHandler** property).
+
+## Manipulating State
+
+* To manipulate state, react provides a ```setState()``` method. This allows us to update the ```state``` property.
+* Remember, we have access to ```setState()``` because the ```App``` class extends ```Component```.
+* Don't try to mutate state like this, ```this.state.persons[0].name = 'abcde';```.
+* ```setState()``` takes an object as an argument.
+* ```setState()``` will merge whatever data is passed with the existing data.
+
+```javascript
+//App.js
+class App extends Component {
+  state = {
+    persons:[
+      { name: 'Joe', age: 28, address: '1 Somewhere St, Somewhere'},
+      { name: 'Jane', age: 29, address: '2 Somewhere St, Somewhere'},
+      { name: 'Bob', age: 35, address: '3 Somewhere St, Somewhere'}
+    ]
+  };
+  switchNameHandler = () => {
+    this.setState({
+      persons:[
+        { name: 'Jack', age: 28, address: '1 OverThere St, SomeOtherPlace'},
+        { name: 'Jane', age: 29, address: '2 Somewhere St, Somewhere'},
+        { name: 'Bob', age: 35, address: '3 Somewhere St, Somewhere'}
+      ]
+    })
+  };
+  render() {
+    return (
+      <div className="App">
+        <h1>I am a react app</h1>
+        <button onClick={this.switchNameHandler}>Select Name</button>
+        <Person name={this.state.persons[0].name} age={this.state.persons[0].age} address={this.state.persons[0].address}>My hobbies are: racing</Person>
+        <Person name={this.state.persons[1].name} age={this.state.persons[1].age} address={this.state.persons[1].address} />
+        <Person name={this.state.persons[2].name} age={this.state.persons[2].age} address={this.state.persons[2].address} />
+      </div>
+    );
+  }
+}
+```
+
+**Note:** There are only two ways to update the DOM. Changing state & props.
+
+### Using stateHook()
